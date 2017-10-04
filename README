@@ -1,0 +1,23 @@
+EECS 293
+Author: Andrew Hwang
+
+Input:
+The program blacklists the hosts that generated an excessive 
+number of failed logins or illegal user attempts. Its command 
+line argument is a security threshold, by default equal to 
+three. It takes from standard input the full log summary 
+(including but not limited to the failed login and illegal 
+user sections).
+
+Output: Deny List
+The program will generate on standard output a list of hosts 
+to be blacklisted. The output only lists the hosts who made 
+a combined total of failed logins or illegal user attempts 
+more than the threshold. It uses the fully qualified domain 
+names when available and lists the IP addresses otherwise. 
+It does not list the same host more than once. The output 
+consists of a sequence of lines with five leading blanks, 
+all but the last one terminated by a backslash. Each line is
+a comma-separated list of offending hosts. No line contains 
+more than eighty characters. The only exception would be a 
+long host name that would not fit in an eighty-character line.
